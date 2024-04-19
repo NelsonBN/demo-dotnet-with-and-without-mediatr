@@ -1,0 +1,35 @@
+@Host = http://localhost:5239
+
+GET {{Host}}/products
+Accept: application/json
+
+###
+
+GET {{Host}}/products/c135c415-7211-426a-8b89-33936920e660
+Accept: application/json
+
+###
+
+POST {{Host}}/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "quantity": 100,
+    "price": 1
+}
+
+###
+
+PUT {{Host}}/products/c135c415-7211-426a-8b89-33936920e660
+Content-Type: application/json
+
+{
+    "name": "Product 122",
+    "quantity": 10,
+    "price": 12
+}
+
+###
+
+DELETE {{Host}}/products/c135c415-7211-426a-8b89-33936920e660
